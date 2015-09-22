@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %} Detail {% endblock %}
+{% block body %}
+    <h1>{{object.title}}</h1>
+    <p>
+      {{ object.time }}
+    </p>
+    <p>
+      <a href="{% url 'lectures-institution' institution_id=object.institution_id %}">{{ object.institution }}</a>
+    </p>
+{% endblock %}
