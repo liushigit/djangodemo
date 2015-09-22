@@ -3,6 +3,6 @@
 {% block body %}
     {% for i in object_list %}
       <h2><a href="{{ i.get_absolute_url }}">{{ i.title }}</a></h2>
-      <p> {{i.time}} </p>
+      <p> {{i.time | date:'Y-m-d H:i'}} </p>
     {% endfor %}
 {% endblock body %}
